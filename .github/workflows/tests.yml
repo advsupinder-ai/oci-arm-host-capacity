@@ -61,3 +61,10 @@ jobs:
           TELEGRAM_USER_ID: ${{ secrets.TELEGRAM_USER_ID }}
           TELEGRAM_BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_API_KEY }}
 
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
